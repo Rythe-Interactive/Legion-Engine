@@ -124,11 +124,7 @@ local function kindName(projectType, config)
     elseif projectType == "editor" then
         return "SharedLib"
     elseif projectType == "application" then
-        if config == rythe.Configuration.RELEASE then
-            return "WindowedApp"
-        else
-            return "ConsoleApp"
-        end
+        return "ConsoleApp"
     elseif projectType == "library" then
         return "StaticLib"
     elseif projectType == "header-only" then
@@ -386,19 +382,29 @@ local function getDepsRecursive(project, projectType)
         deps = {}
     end
 
-    if projectType == "test" then
-        deps[#deps + 1] = "third_party/catch2"
-    end
-
     local copy = utils.copyTable(deps)
+
+    if projectType == "test" then
+        local containsCatch = false
+
+        for i, dep in ipairs(copy) do
+            if string.match(dep, "third_party/catch2") then
+                containsCatch = true
+            end
+        end
+
+        if containsCatch == false then
+            copy[#copy + 1] = "third_party/catch2"
+        end
+    end
 
     local set = {}
 
-    for i, dep in ipairs(deps) do
+    for i, dep in ipairs(copy) do
         set[dep] = true
     end
 
-    for i, dep in ipairs(deps) do
+    for i, dep in ipairs(copy) do
         local assemblyId, scope = getDepAssemblyAndScope(dep)
         local depProject, depId, depType = findAssembly(assemblyId)
 
