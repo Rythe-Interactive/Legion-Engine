@@ -19,3 +19,6 @@
 [submodule "libraries/third_party/catch2"]
 	path = libraries/third_party/catch2
 	url = https://github.com/Rythe-Interactive/Catch2.git
+[submodule "premake/rythe"]
+	path = premake/rythe
+	url = https://github.com/Rythe-Interactive/rythe-build-system.git
