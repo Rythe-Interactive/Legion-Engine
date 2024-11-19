@@ -1,12 +1,12 @@
-[![legion logo banner](https://cdn.discordapp.com/attachments/682321169541890070/767684570199359499/banner.png)](https://legion-engine.com)
+[![rythe logo banner](https://assets.zyrosite.com/dWxb3NO0jWugObXN/logo_for_dark_bg-A3QwL7kkxvfw1ywO.png)](http://rythe-interactive.com)
 [![build](https://github.com/Legion-Engine/Legion-Engine/workflows/build-action/badge.svg)](https://github.com/Legion-Engine/Legion-Engine/actions?query=workflow%3Abuild-action)
 [![analyze](https://github.com/Legion-Engine/Legion-Engine/workflows/analyze-action/badge.svg)](https://github.com/Legion-Engine/Legion-Engine/actions?query=workflow%3Aanalyze-action)
 [![docs](https://github.com/Legion-Engine/Legion-Engine/workflows/docs-action/badge.svg)](https://docs.legion-engine.com)
 [![License-MIT](https://img.shields.io/github/license/Legion-Engine/Legion-Engine)](https://github.com/Legion-Engine/Legion-Engine/blob/main/LICENSE)
 [![Discord](https://img.shields.io/discord/682321168610623707.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/unVNRbd)
-# Legion-Engine
-Legion-Engine is a data oriented C++17 OpenGL game engine built to make optimal use of modern hardware.<br><br>
-The Legion-Core is built on an async compute minded design to take care of the logic and an ECS to take care of the data. This allows the engine and editor to utilize all the power they can find and to be extremely modular.
+# Rythe-Engine
+Rythe-Engine is a data oriented C++17 OpenGL game engine built to make optimal use of modern hardware.<br><br>
+The Rythe-Core is built on an async compute minded design to take care of the logic and an ECS to take care of the data. This allows the engine and editor to utilize all the power they can find and to be extremely modular.
 
 ## Features
 ### Rendering
@@ -17,7 +17,7 @@ The Legion-Core is built on an async compute minded design to take care of the l
 - Automatic exposure
 - Modular rendering pipeline
 - Custom shader support & shader standard library
-- shader precompiler [lgnspre](https://github.com/Legion-Engine/LegionShaderPreprocess)
+- shader precompiler [lgnspre](https://github.com/Rythe-Interactive/LegionShaderPreprocess)
 - GLTF & OBJ support
 
 ### Physics
@@ -65,16 +65,16 @@ The Legion-Core is built on an async compute minded design to take care of the l
 The engine is by default build using Visual Studio 19 using the Clang++ compiler and C++17.
 For linux we don't provide any default IDE support. However, you can still compile the engine using Clang++.
 ### Install
-You can either build the engine yourself using Premake5 or the already provided Visual Studio 19 solution. As of now Legion does not support compilation to DLL.
+You can either build the engine yourself using Premake5 or the already provided Visual Studio 19 solution. As of now Rythe does not support compilation to DLL.
 Copy the include folder to your project and link the libraries you compiled.
 ### Setup
-Legion already defines the C++ entry point in it's own source code. So in order to start making a program define ``LEGION_ENTRY`` and include any of modules main include files.
+Rythe already defines the C++ entry point in it's own source code. So in order to start making a program define ``LEGION_ENTRY`` and include any of modules main include files.
 eg:
 ```cpp
 #define LEGION_ENTRY
 #include <core/core.hpp>
 ```
-Since the entry point is already defined you need to define a different function to start working with Legion. Legion will already start itself, but it won't have any modules attached. In order to attach modules you need to define the ``reportModules`` function like so:
+Since the entry point is already defined you need to define a different function to start working with Rythe. Rythe will already start itself, but it won't have any modules attached. In order to attach modules you need to define the ``reportModules`` function like so:
 ```cpp
 #include "mymodule.hpp"
 using namespace legion;
@@ -100,7 +100,7 @@ public:
     }
 };
 ```
-Legion engine uses an ECS for all of it's core functionality. So for your own project you need to define your own systems and components:
+Rythe engine uses an ECS for all of it's core functionality. So for your own project you need to define your own systems and components:
 ```cpp
 #include <core/core.hpp>
 
@@ -127,7 +127,7 @@ class MySystem final : public legion::System<MySystem>
 ```
 For more information about the engine usage see the [docs](https://docs.legion-engine.com).
 ## Dependencies
-(All libraries can already be found in the [deps](https://github.com/Legion-Engine/Legion-Engine/tree/main/deps) folder)
+(All libraries can already be found in the [deps](https://github.com/Rythe-Interactive/Rythe-Engine/tree/main/deps) folder)
 * [OpenAL Soft](https://github.com/kcat/openal-soft)
 * [GLM](https://glm.g-truc.net/)
 * [OpenGL](https://www.khronos.org/opengl/)
@@ -138,7 +138,7 @@ For more information about the engine usage see the [docs](https://docs.legion-e
 * [Cereal](http://uscilab.github.io/cereal/)
 * [Spdlog](https://github.com/gabime/spdlog)
 * [Minimp3](https://github.com/lieff/minimp3)
-* [Legion shader preprocessor (lgnspre)](https://github.com/Legion-Engine/LegionShaderPreprocess)
+* [Legion shader preprocessor (lgnspre)](https://github.com/Rythe-Interactive/LegionShaderPreprocess)
 
 ## Contributing
 
