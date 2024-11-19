@@ -130,6 +130,7 @@ docs/venv
 **/imgui.ini
 *.sln
 *.vcxproj
+*.vcxitems
 *.filters
 build/.cmake
 build/CMakeFiles
