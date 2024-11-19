@@ -4,24 +4,14 @@
 #if defined(NDEBUG)
 	#define RYTHE_KEEP_CONSOLE
 #endif
-#include <application/application.hpp>
+
 #include <core/core.hpp>
-#include <graphics/graphics.hpp>
 
-#include "module/examplemodule.hpp"
 
-#ifdef RYTHE_AUDIO
-	#include <audio/audio.hpp>
-#endif
-
-void RYTHE_CCONV reportModules(rythe::Engine* engine)
+int RYTHE_CCONV reportModules(rythe::core::Program& program)
 {
 	using namespace rythe;
-	engine->reportModule<app::ApplicationModule>();
-	engine->reportModule<gfx::RenderingModule>();
-	engine->reportModule<ExampleModule>();
+    program.addEngineInstance
 
-#ifdef RYTHE_AUDIO
-	engine->reportModule<audio::AudioModule>();
-#endif
+    return 0;
 }
