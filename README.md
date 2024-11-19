@@ -1,4 +1,4 @@
-[![rythe logo banner](https://media.discordapp.net/attachments/1042900549693079702/1052519407496212490/Logo_for_dark_bg.png?width=1440&height=592)](http://rythe-interactive.com)
+[![rythe logo banner](https://assets.zyrosite.com/dWxb3NO0jWugObXN/logo_for_dark_bg-A3QwL7kkxvfw1ywO.png)](http://rythe-interactive.com)
 [![build](https://github.com/Rythe-Interactive/Rythe-Engine/workflows/build/badge.svg)](https://github.com/Rythe-Interactive/Rythe-Engine/actions?query=workflow%3Abuild)
 [![analyze](https://github.com/Rythe-Interactive/Rythe-Engine/workflows/analyze/badge.svg)](https://github.com/Rythe-Interactive/Rythe-Engine/actions?query=workflow%3Aanalyze)
 [![License-MIT](https://img.shields.io/github/license/Rythe-Interactive/Rythe-Engine)](https://github.com/Legion-Engine/Legion-Engine/blob/main/LICENSE)
