@@ -8,6 +8,7 @@ MaxEmptyLinesToKeep: 3
 BreakBeforeBraces: Allman
 BreakConstructorInitializers: BeforeColon
 BreakInheritanceList: AfterColon
+BreakAdjacentStringLiterals: true
 BreakAfterAttributes: Leave
 BreakBeforeConceptDeclarations: Always
 
@@ -41,13 +42,15 @@ AlignTrailingComments:
   OverEmptyLines: 1
 AlignEscapedNewlines: Right
 AllowAllArgumentsOnNextLine: true
+AllowBreakBeforeNoexceptSpecifier: Always
 AllowShortBlocksOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: true
+AllowShortCompoundRequirementOnASingleLine: true
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: All
-AllowShortLoopsOnASingleLine: true
+AllowShortLoopsOnASingleLine: false
 AlwaysBreakTemplateDeclarations: Yes
 BitFieldColonSpacing: Both
 
