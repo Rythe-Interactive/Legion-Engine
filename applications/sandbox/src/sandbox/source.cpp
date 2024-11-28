@@ -8,7 +8,7 @@
 #include <core/core.hpp>
 #include <rsl/type_traits>
 
-template<typename T>
+template <typename T>
 struct foo
 {
 };
@@ -30,7 +30,10 @@ int RYTHE_CCONV reportModules(rythe::core::Program& program)
 	[[maybe_unused]] constexpr auto shrunk = typeName.refit<typeName.size() + 1>();
 	constexpr rsl::id_type typeHash = rsl::type_id<std::string>();
 
-	rsl::log::debug("type info: {} : {}, {}, {}, {}", rsl::string_view(typeName), typeHash, typeName.size(), typeName.capacity(), shrunk.capacity());
+	rsl::log::debug(
+		"type info: {} : {}, {}, {}, {}", rsl::string_view(typeName), typeHash, typeName.size(), typeName.capacity(),
+		shrunk.capacity()
+	);
 
 	return -1;
 }

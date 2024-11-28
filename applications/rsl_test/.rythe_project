@@ -1,7 +1,0 @@
-local project = {
-    dependencies = {
-        "rythe/rythe-standard-library:test"
-    }
-}
-
-return project

@@ -13,7 +13,7 @@ BreakAfterAttributes: Leave
 BreakBeforeConceptDeclarations: Always
 
 # General rules
-InsertBraces: false 			
+InsertBraces: true
 PointerAlignment: Left
 ColumnLimit: 120
 

@@ -6,7 +6,7 @@ local project = {
 function project.init(proj, ctx)
     proj.pre_build = {
         "cd " .. _WORKING_DIR,
-        ctx.getCommand()
+        "powershell -File ./utils/format/run-clang-format.ps1"
     }
     
     return proj
