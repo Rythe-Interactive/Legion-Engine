@@ -13,10 +13,10 @@ struct foo
 {
 };
 
-int RYTHE_CCONV reportModules(rythe::core::Program& program)
+rsl::result<void> RYTHE_CCONV init_program(rythe::core::program& program)
 {
 	using namespace rythe;
-	program.addEngineInstance();
+	program.add_engine_instance();
 
 	[[maybe_unused]] constexpr rsl::constexpr_string A = "Something";
 	[[maybe_unused]] constexpr rsl::constexpr_string B = "Other";
@@ -35,5 +35,5 @@ int RYTHE_CCONV reportModules(rythe::core::Program& program)
 		shrunk.capacity()
 	);
 
-	return -1;
+	return rsl::okay;
 }
